@@ -1,0 +1,92 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+=========Packet capture summary=========
+
+Capture start date: 	1999-03-11 08:45:02 EDT
+Capture duration:    	0 seconds
+Packets in capture: 	1
+Minimum packet size: 	90
+Maximum packet size: 	90
+Average packet size: 	90
+
+
+=========Link layer=========
+
+---------Source ethernet addresses---------
+
+00:00:86:05:80:da     1     
+
+---------Destination ethernet addresses---------
+
+00:60:97:07:69:ea     1     
+
+
+=========Network layer=========
+
+---------Network layer protocols---------
+
+0x86dd                1     
+
+---------Source IP addresses---------
+
+(no results)          
+
+---------Destination IP addresses---------
+
+(no results)          
+
+---------Unique ARP participants---------
+
+(no results)          
+
+
+=========Transport layer=========
+
+---------Transport layer protocols---------
+
+(no results)          
+
+
+=========Transport layer: TCP=========
+
+---------Source TCP ports---------
+
+(no results)          
+
+---------Destination TCP ports---------
+
+(no results)          
+
+---------TCP flags---------
+
+(no results)          
+
+---------TCP options---------
+
+(no results)          
+
+
+=========Transport layer: UDP=========
+
+---------Source UDP ports---------
+
+(no results)          
+
+---------Destination UDP ports---------
+
+(no results)          
+
+
+=========Transport layer: ICMP=========      
+
+---------ICMP types---------
+
+(no results)          
+
+---------ICMP codes---------
+
+(no results)          
+   
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

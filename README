@@ -1,0 +1,65 @@
+PROJECT 3: WIRETAP
+
+**************************
+
+Name  : Avinash Ravi
+uname : avinravi
+
+Name  : Sravya Gudipudi
+uname : sgudipud
+
+**************************
+
+
+What's in the code?
+---------------------
+The main objective  of this project is  to write an analysis routine for the pcap file provided. 
+The implementation of Wiretap is as follows:
+
+The program starts running, it opens the captured pcap file and checks if the packet is captured 
+from Ethernet. If no, the program terminates closing the captured file. If yes, it starts analysing
+every packet  present in the capture file. For every packet, it analyses the Ethernet header and
+stores the source and destination Ethernet addresses in a map. It also checks for the underlying 
+network layer protocol. If the network layer protocol in the packet is ARP, it parses the packet
+to get  the ARP Ethernet and ip address and stores it in a map. If the network layer protocol is 
+IP, it  parses through the  packet to  get source and destination ip addresses. It also gets the 
+underlying Transport layer protocol. If  the transport layer protocol is TCP, it gets the source 
+and destination ports. It also gets the TCP flags and TCP options from the packet. If UDP is the
+underlying transport layer, it  gets the source and  destination ports from the packet. If ICMP,
+then the program gets the ICMP codes and ICMP types from the  packet. It also keeps track of the
+summary of Network and Transport layer protocols present in the packet. Once all the packets are 
+parsed, the program prints the summary on the console.
+
+This program makes use of 'libpcap' to open, parse and close the captured pcap file. It also uses 
+several pre-defined structures from if_ether.h, ip.h, tcp.h, udp.h, ip_icmp.h to parse each packet
+present in capture file.
+
+Tasks Accomplished
+---------------------
+-> Parsing through each packet to get Link, Network, Transport layer headers.
+-> Parsing through headers of Ethernet, IP, ARP, TCP, UDP, ICMP packets.
+-> Using maps to store and print the summary of each value of packet header.
+
+
+Files in the Project
+---------------------
+wt_setup.cpp    :      Contains setup code, such as parsing arguments
+wt_setup.h      :      Header file for wt_setup
+
+wiretap.cpp     :      Contains code for parsing and outputting the summary of packets in pcap file
+
+
+Compiling the Code
+---------------------
+The code compilation can be done using the Makefile as 
+  gmake all
+When compiling using gmake, the executable is stored in wiretap.
+
+
+Execution and Interpretation of Output
+---------------------------------------
+This program can be executed as 
+./wiretap --open <capture_file>
+Eg: ./wiretap --open wget.pcap
+
+This prints the summary of Link, Network, Transport Layer headers for packets in capture file on the console.
